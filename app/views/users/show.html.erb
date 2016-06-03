@@ -1,15 +1,7 @@
-<%= image_tag @user.profile_picture %>
+<h1><%= current_user.username %></h1>
 
-<h1><%= @user.username %></h1>
-<h5><%= @user.suncream_factor %></h5>
-<p><%= @user.bio %></p>
+  <h2>Users show page</h2>
 
-  <ul>
-    <li><% @user.images.each do |image| %>
-      <ul class="tile">
-        <li><%= image.title %></li>
-        <li><%= image_tag image.url %></li>
-      </ul>
-    <%end%>
-  </li>
-</ul>
+  <h1><%= current_user.sign_in_count %></h1>
+
+  <h1><%= current_user.encrypted_password %></h1>
