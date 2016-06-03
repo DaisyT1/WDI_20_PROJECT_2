@@ -1,0 +1,15 @@
+<%= image_tag @user.profile_picture %>
+
+<h1><%= @user.username %></h1>
+<h5><%= @user.suncream_factor %></h5>
+<p><%= @user.bio %></p>
+
+  <ul>
+    <li><% @user.images.each do |image| %>
+      <ul class="tile">
+        <li><%= image.title %></li>
+        <li><%= image_tag image.url %></li>
+      </ul>
+    <%end%>
+  </li>
+</ul>
