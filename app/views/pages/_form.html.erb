@@ -1,4 +1,8 @@
-<%= form_for(@page) do |f| %>
+ <h2>Story title</h2>
+ <%= @story.title %>
+
+
+ <%= form_for @page, :url => { :action => :create, :id => @story.id } do |f| %>
   <% if @page.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@page.errors.count, "error") %> prohibited this page from being saved:</h2>
@@ -10,7 +14,6 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field">
     <%= f.label :page_image %><br>
     <%= f.text_area :page_image %>
@@ -18,10 +21,6 @@
   <div class="field">
     <%= f.label :body %><br>
     <%= f.text_area :body %>
-  </div>
-  <div class="field">
-    <%= f.label :story_id %><br>
-    <%= f.number_field :story_id %>
   </div>
   <div class="actions">
     <%= f.submit %>

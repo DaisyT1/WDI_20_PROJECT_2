@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_action :set_page, only: [:show, :edit, :update, :destroy]
+  before_action :set_page, only: [:show, :edit, :update, :destroy] 
 
   # GET /pages
   # GET /pages.json
@@ -14,7 +14,8 @@ class PagesController < ApplicationController
 
   # GET /pages/new
   def new
-    @page = Page.new
+    @story = Story.find(params[:id])
+    @page = @story.pages.new
   end
 
   # GET /pages/1/edit
@@ -24,11 +25,15 @@ class PagesController < ApplicationController
   # POST /pages
   # POST /pages.json
   def create
-    @page = Page.new(page_params)
+
+    @story = Story.find(params[:id])
+    @page = @story.pages.new(page_params)
+
+    # @story = current_user.stories.new(story_params)
 
     respond_to do |format|
       if @page.save
-        format.html { redirect_to @page, notice: 'Page was successfully created.' }
+        format.html { redirect_to new_page_path(:id => @story.id), notice: 'Page was successfully created.' }
         format.json { render :show, status: :created, location: @page }
       else
         format.html { render :new }
