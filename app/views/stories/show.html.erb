@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cover img:</strong>
+  <%= @story.cover_img %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @story.title %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @story.age %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @story.note %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @story.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_story_path(@story) %> |
+<%= link_to 'Back', stories_path %>
