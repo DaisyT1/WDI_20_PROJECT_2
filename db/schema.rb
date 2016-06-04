@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160604105625) do
+ActiveRecord::Schema.define(version: 20160604111524) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "pages", force: :cascade do |t|
+    t.text     "page_image"
+    t.text     "body"
+    t.integer  "story_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "stories", force: :cascade do |t|
     t.text     "cover_img"
