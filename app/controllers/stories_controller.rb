@@ -11,6 +11,8 @@ class StoriesController < ApplicationController
   # GET /stories/1
   # GET /stories/1.json
   def show
+    @pages = @story.pages.all
+    @count = 0
   end
 
   # GET /stories/new
