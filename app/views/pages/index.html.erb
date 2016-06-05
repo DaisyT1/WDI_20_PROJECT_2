@@ -15,7 +15,7 @@
   <tbody>
     <% @pages.each do |page| %>
       <tr>
-        <td><%= page.page_image %></td>
+        <td><%= image_tag("#{page.page_image}", size: "50") %></td>
         <td><%= page.body %></td>
         <td><%= page.story_id %></td>
         <td><%= link_to 'Show', page %></td>
