@@ -22,6 +22,8 @@ class StoriesController < ApplicationController
 
   # GET /stories/1/edit
   def edit
+    @pages = @story.pages.all
+    @count = 0
   end
 
   # POST /stories

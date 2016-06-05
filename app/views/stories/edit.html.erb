@@ -2,5 +2,25 @@
 
 <%= render 'form' %>
 
+<% @pages.each do |page| %>
+
+  <p>
+    <strong>Page number:</strong>
+    <%= @count = @count + 1 %>
+  </p>
+  <p>
+    <strong>Page image:</strong>
+    <%= image_tag("#{page.page_image}", size: "50") %>
+  </p>
+
+  <p>
+    <strong>Body:</strong>
+    <%= page.body %>
+  </p>
+
+  <td><%= link_to 'Edit', edit_page_path(page) %></td>
+
+<% end %>
+
 <%= link_to 'Show', @story %> |
 <%= link_to 'Back', stories_path %>
