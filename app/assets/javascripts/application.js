@@ -15,4 +15,9 @@ $( document ).ready(function(){
   $('.indicator-item').on("click", function(){
     $('.sliderone').slider('pause');
   });
+
+  $(document).ready(function(){
+      $('.parallax').parallax();
+    });
+  
 })
