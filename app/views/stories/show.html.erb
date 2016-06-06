@@ -1,5 +1,17 @@
 <p id="notice"><%= notice %></p>
 
+<div class="fullscreen">
+    <ul class="slides">
+      <li>
+        <img src="<%= @story.cover_img %>"> <!-- random image -->
+        <div class="caption center-align">
+          <h3><%= @story.title %></h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+
 <p>
   <strong>Cover img:</strong>
   <%= image_tag("#{@story.cover_img}", size: "50") %>
