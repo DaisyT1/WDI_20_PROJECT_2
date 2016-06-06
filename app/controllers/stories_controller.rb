@@ -24,6 +24,7 @@ class StoriesController < ApplicationController
   def edit
     @pages = @story.pages.all
     @count = 0
+    @stroy = Story.find(params[:id])
   end
 
   # POST /stories

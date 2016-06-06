@@ -18,7 +18,7 @@
     <% @stories.each do |story| %>
       <tr>
         <td><a href="stories/<%= story.id %>"><%= image_tag("#{story.cover_img}", size: "50") %></td></a>
-        <td><%= link_to story.title, :controller => :pages, :action => :new, :id => story.id %></td>
+        <td><a href="stories/<%= story.id %>"><%= story.title %></a></td>
         <td><%= story.age %></td>
         <td><%= story.note %></td>
         <td><%= story.user_id %></td>

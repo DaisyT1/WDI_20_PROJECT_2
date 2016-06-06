@@ -21,6 +21,7 @@ class PagesController < ApplicationController
 
   # GET /pages/1/edit
   def edit
+    @back_url = session[:my_previous_url]
   end
 
   # POST /pages

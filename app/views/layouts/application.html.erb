@@ -5,45 +5,38 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
+ <p class="notice"><%= notice %></p>
+ <p class="alert"><%= alert %></p>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+ <nav>
+   <div class="navbar-fixed">
+     <a href="/" class="brand-logo">Logo</a>
+    <% if current_user %>
+       <ul id="nav-mobile" class="right hide-on-med-and-down">
+       <li><a href="/stories">Stories</a></li>
+       <li><a href="/pages">Pages</a></li>
+       <li><a href="/users/<%= current_user.id %>"><%= current_user.username %></a></li>
+       <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+       <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+       <% else %>
+       <li><%= link_to "Sign In", new_user_session_path %></li>
+      <li><%= link_to "Register", new_user_registration_path %></li>
+    <% end %>
+   </ul>
+</nav>
 
-  
-  Copy
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">
-          <img alt="Brand" src="...">
-        </a>
-      </div>
-    </div>
-  </nav>
-
-  <nav>
-      <ul>
-       <li><%= link_to "Home", root_path %></li>
-       
-        <% if current_user %>
-        <li><a href="/stories">Stories</a></li>
-        <li><a href="/pages">Pages</a></li>
-        <li><a href="/users/<%= current_user.id %>"><%= current_user.username %></a></li>
-          <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-          <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
-        <% else %>
-          <li><%= link_to "Sign In", new_user_session_path %></li>
-          <li><%= link_to "Register", new_user_registration_path %></li>
-        <% end %>
-      </ul>
-   </nav>
-
-  <main>
-    <%= yield %>
-  </main>
-
+<main>
+  <%= yield %>
+</main>
 
 </body>
-</html>
