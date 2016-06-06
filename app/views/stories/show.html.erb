@@ -1,65 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<div class="fullscreen">
-    <ul class="slides">
-      <li>
-        <img src="<%= @story.cover_img %>"> <!-- random image -->
-        <div class="caption center-align">
-          <h3><%= @story.title %></h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-    </ul>
-  </div>
+<div class="slider slideronex">
+  <ul class="slides">
+    <li>
+      <img src="<%= @story.cover_img %>">
+      <div class="caption center-align">
+        <h3><%= @story.title %></h3>
+        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+      </div>
+    </li>
+    <% @pages.each do |page| %>
+    <li>
+      <img src="<%= page.page_image %>">
+      <div class="caption left-align">
+        <h3><%=  page.body %></h3>
+        <h5 class="light grey-text text-lighten-3"><%= @count = @count + 1 %></h5>
+      </div>
+    </li>
+    <% end %>
+  </ul>
+</div>
 
-<p>
-  <strong>Cover img:</strong>
-  <%= image_tag("#{@story.cover_img}", size: "50") %>
-</p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @story.title %>
-</p>
 
-<p>
-  <strong>Age:</strong>
-  <%= @story.age %>
-</p>
 
-<p>
-  <strong>Note:</strong>
-  <%= @story.note %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @story.user_id %>
-</p>
-
-||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
-<% @pages.each do |page| %>
-
-  <p>
-    <strong>Page number:</strong>
-    <%= @count = @count + 1 %>
-  </p>
-  <p>
-    <strong>Page image:</strong>
-    <%= image_tag("#{page.page_image}", size: "100") %>
-  </p>
-
-  <p>
-    <strong>Body:</strong>
-    <%= page.body %>
-  </p>
-
-  <p>
-    <strong>Story:</strong>
-    <%= page.story_id %>
-  </p>
-
-<% end %>
-
-<%= link_to 'Back', stories_path %>
