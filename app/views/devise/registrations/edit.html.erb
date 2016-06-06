@@ -1,7 +1,8 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<br>
+<h3>Edit <%= resource_name.to_s.humanize %></h3>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
+  <h5><%= devise_error_messages! %></h5>
 
   <div class="row">
     <div class="input-field col s8">
@@ -59,12 +60,13 @@
 
 
   <div class="actions">
-    <%= f.submit "Update" %>
+    <div class="waves-effect waves-light btn"><%= f.submit "Update" %></div>
   </div>
 <% end %>
+<br>
 
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+  <h6>Unhappy?</h6><br>
+    <div class="waves-effect waves-light btn red"><%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></div>
+      <div class="center-align">
+    <div class="waves-effect waves-light btn"><%= link_to "Back", :back %></div>
+  </div>
