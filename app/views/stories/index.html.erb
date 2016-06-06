@@ -14,15 +14,17 @@
            <p><%= story.note %></p>
          </div>
          <div class="card-action">
+         <div class="center-align">
            <a href="stories/<%= story.id %>">Read</a>
            <a><%= link_to 'Edit', edit_story_path(story) %></a>
            <a><%= link_to 'Delete', story, method: :delete, data: { confirm: 'Are you sure you want to delete this story?' } %></a>
+           </div>
          </div>
        </div>
      </div>
      <% end %>
    </div>
    <div class="center-align">
-   <h5>Add another story</h5>
    <a href="stories/new" class="btn-floating btn-large waves-effect waves-light"><i class="material-icons">add</i></a>
+   <h5>Create a new story</h5>
    </div>

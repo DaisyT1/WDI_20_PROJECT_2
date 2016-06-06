@@ -1,0 +1,32 @@
+ <nav>
+   <div class="nav-wrapper">
+     <a href="/" class="brand-logo">Logo</a>
+     <a href="" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+    <% if current_user %>
+    <ul class="right hide-on-med-and-down">
+       <li><a href="/stories">Stories</a></li>
+       <li><a href="/pages">Pages</a></li>
+       <li><a href="/users/<%= current_user.id %>"><%= current_user.username %></a></li>
+       <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+       <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+    </ul>
+       <% else %>
+    <ul class="right hide-on-med-and-down">
+       <li><%= link_to "Sign In", new_user_session_path %></li>
+      <li><%= link_to "Register", new_user_registration_path %></li>
+    <% end %>
+   </ul>
+   <ul class="side-nav" id="mobile-demo">
+   <% if current_user %>   
+      <li><a href="/stories">Stories</a></li>
+      <li><a href="/pages">Pages</a></li>
+      <li><a href="/users/<%= current_user.id %>"><%= current_user.username %></a></li>
+      <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+      <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+      <% else %>
+      <li><%= link_to "Sign In", new_user_session_path %></li>
+     <li><%= link_to "Register", new_user_registration_path %></li>
+   <% end %>
+   </ul>
+  </div>
+</nav>
