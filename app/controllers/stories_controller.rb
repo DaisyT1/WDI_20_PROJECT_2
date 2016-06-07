@@ -24,7 +24,7 @@ class StoriesController < ApplicationController
   def edit
     @pages = @story.pages.all
     @count = 0
-    @stroy = Story.find(params[:id])
+    @story = Story.find(params[:id])
   end
 
   # POST /stories
@@ -48,7 +48,7 @@ class StoriesController < ApplicationController
   def update
     respond_to do |format|
       if @story.update(story_params)
-        format.html { redirect_to @story, notice: 'Story was successfully updated.' }
+        format.html { redirect_to edit_story_path, notice: 'Story was successfully updated.' }
         format.json { render :show, status: :ok, location: @story }
       else
         format.html { render :edit }
