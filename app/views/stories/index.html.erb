@@ -1,30 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<h3>My library</h3>
+<div class="container">
+  <h3>My library</h3>
 
-<% @stories.each do |story| %>
+  <% @stories.each do |story| %>
   <div class="row">
-    <div class="col s12 m4">
+    <div class="col s12 m6">
      <a href="stories/<%= story.id %>">
        <div class="card">
          <div class="card-image">
            <img src="<%= story.cover_img %>">
-        <span class="card-title"><%= story.title %></span> 
-      </div>
-    </a>
-      <div class="card-content">
+           <span class="card-title"><%= story.title %></span> 
+         </div>
+       </a>
+       <div class="card-content">
         <p><%= story.note %></p>
       </div>
-        <div class="card-action">
-         <div class="center-align">
-           <a href="<%= edit_story_path(story) %>"><i class="small material-icons">mode_edit</i></a>
-           </div>
-         </div>
-        </div>
+      <div class="card-action">
+       <div class="center-align">
+         <a href="<%= edit_story_path(story) %>"><i class="small material-icons">mode_edit</i></a>
+       </div>
      </div>
-    <% end %>
-    </div>
-      <div class="center-align">
-        <a href="stories/new" class="btn-floating btn-large waves-effect waves-light"><i class="material-icons">add</i></a>
-      <h5>Create a new story</h5>
    </div>
+ </div>
+ <% end %>
+</div>
+<div class="center-align">
+  <a href="stories/new" class="btn-floating btn-large waves-effect waves-light"><i class="material-icons">add</i></a>
+  <h5>Create a new story</h5>
+</div>
+</div>
