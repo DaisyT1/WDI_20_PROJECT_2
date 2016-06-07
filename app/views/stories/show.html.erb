@@ -1,17 +1,21 @@
 <p id="notice"><%= notice %></p>
 
+
 <div class="slider sliderone">
   <ul class="slides">
     <li>
       <img src="<%= @story.cover_img %>">
       <div class="caption center-align">
-        <h3><%= @story.title %></h3>
-        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-      </div>
-    </li>
-    <% @pages.each do |page| %>
-    <li>
-      <img src="<%= page.page_image %>">
+        <div class="left-align">
+          <div class="btn-floating btn-large waves-effect waves-light"><%= link_to 'Back', stories_path %></div>
+        </div>
+      <h3><%= @story.title %></h3>
+      <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+    </div>
+  </li>
+  <% @pages.each do |page| %>
+  <li>
+    <img src="<%= page.page_image %>">
       <div class="caption left-align">
         <h><%=  page.body %></h3>
         <h5 class="light grey-text text-lighten-3"><%= @count = @count + 1 %></h5>
