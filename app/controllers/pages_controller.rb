@@ -17,11 +17,11 @@ class PagesController < ApplicationController
   def new
     @story = Story.find(params[:id])
     @page = @story.pages.new
+ 
   end
 
   # GET /pages/1/edit
   def edit
-    @back_url = session[:my_previous_url]
   end
 
   # POST /pages

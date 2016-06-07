@@ -1,18 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-
 <div class="slider sliderone">
   <ul class="slides">
     <li>
       <img src="<%= @story.cover_img %>">
-      <div class="caption center-align">
-        <div class="left-align">
-          <div class="btn-floating btn-large waves-effect waves-light"><%= link_to 'Back', stories_path %></div>
-        </div>
+      <div class="caption center-align">    
       <h3><%= @story.title %></h3>
-      <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+      <h5 class="light grey-text text-lighten-3"></h5>
     </div>
   </li>
+
+  <% if @story.pages.count == 0 %>
+  <div class="center-align" id="hello">
+        <h2 class="valign">Get started</h2>
+        <h4 class="valign">Click to add a new page</h4>
+        <a href="<%= new_page_path %>?id=<%= @story.id %>" class="addPageButton btn-floating btn-large waves-effect waves-light"><i class="material-icons">add</i></a>
+      </div>
+      </div>
+    <% else %>
   <% @pages.each do |page| %>
   <li>
     <img src="<%= page.page_image %>">
@@ -21,10 +26,7 @@
         <h5 class="light grey-text text-lighten-3"><%= @count = @count + 1 %></h5>
       </div>
     </li>
+      <% end %>
     <% end %>
   </ul>
 </div>
-
-
-
-

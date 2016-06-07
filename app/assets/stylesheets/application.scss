@@ -2,3 +2,12 @@
 @import "vairables";
 @import "Materialize/bin/materialize.css";
 
+#hello {
+  position: relative;
+  padding-top: 300px;
+  }
+
+.addPageButton {
+  position: relative;
+  z-index: 999;
+}
