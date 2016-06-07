@@ -2,9 +2,10 @@
 @import "vairables";
 @import "Materialize/bin/materialize.css";
 
-#hello {
+#firstPageNote {
   position: relative;
   padding-top: 300px;
+  z-index: 999;
   }
 
 .addPageButton {

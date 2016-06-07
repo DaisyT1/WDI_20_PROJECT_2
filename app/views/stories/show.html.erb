@@ -11,11 +11,11 @@
   </li>
 
   <% if @story.pages.count == 0 %>
-  <div class="center-align" id="hello">
-        <h2 class="valign">Get started</h2>
-        <h4 class="valign">Click to add a new page</h4>
-        <a href="<%= new_page_path %>?id=<%= @story.id %>" class="addPageButton btn-floating btn-large waves-effect waves-light"><i class="material-icons">add</i></a>
-      </div>
+    <div class="center-align" id="firstPageNote">
+          <h2 class="valign">Get started</h2>
+          <h4 class="valign">Click to add a new page</h4>
+          <a href="<%= new_page_path %>?id=<%= @story.id %>" class="addPageButton btn-floating btn-large waves-effect waves-light"><i class="material-icons">add</i></a>
+        </div>
       </div>
     <% else %>
   <% @pages.each do |page| %>

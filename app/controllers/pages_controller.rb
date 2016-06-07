@@ -48,7 +48,6 @@ class PagesController < ApplicationController
   # PATCH/PUT /pages/1.json
   def update
 
-    
     respond_to do |format|
       if @page.update(page_params)
         format.html { redirect_to edit_story_path(@page.story), notice: 'Page was successfully updated.' }
