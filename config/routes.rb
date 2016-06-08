@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :pages
-  resources :stories
+  
+  resources :stories do
+    resources :pages
+  end
+  
   devise_for :users
   root to: "statics#homepage"
 

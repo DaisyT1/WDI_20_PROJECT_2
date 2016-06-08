@@ -15,7 +15,7 @@ class PagesController < ApplicationController
 
   # GET /pages/new
   def new
-    @story = Story.find(params[:id])
+    @story = Story.find(params[:story_id])
     @page = @story.pages.new
  
   end
@@ -35,7 +35,7 @@ class PagesController < ApplicationController
 
     respond_to do |format|
       if @page.save
-        format.html { redirect_to new_page_path(:id => @story.id), notice: 'Page was successfully created.' }
+        format.html { redirect_to edit_story_path(@page.story), notice: 'Page was successfully created.' }
         format.json { render :show, status: :created, location: @page }
       else
         format.html { render :new }
@@ -77,6 +77,6 @@ class PagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def page_params
-      params.require(:page).permit(:page_image, :body, :story_id)
+      params.require(:page).permit(:page_image, :body, :story_id, :book_pictures)
     end
 end

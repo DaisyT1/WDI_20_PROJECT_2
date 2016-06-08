@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <div class="slider sliderone">
   <ul class="slides">
     <li>
@@ -14,12 +12,13 @@
     <div class="center-align" id="firstPageNote">
           <h2 class="valign">Get started</h2>
           <h4 class="valign">Click to add a new page</h4>
-          <a href="<%= new_page_path %>?id=<%= @story.id %>" class="addPageButton btn-floating btn-large waves-effect waves-light"><i class="material-icons">add</i></a>
+          <a href="<%= new_story_page_path(@story) %>" class="addPageButton btn-floating btn-large waves-effect waves-light"><i class="material-icons">add</i></a>
         </div>
       </div>
     <% else %>
   <% @pages.each do |page| %>
   <li>
+  <%= image_tag page.book_pictures.url %>
     <img src="<%= page.page_image %>">
       <div class="caption left-align">
         <h3><%=  page.body %></h3>
