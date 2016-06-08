@@ -16,8 +16,17 @@ $( document ).ready(function(){
     $('.sliderone').slider('pause');
   });
 
-  $(document).ready(function(){
-      $('.parallax').parallax();
-    });
+  $('.parallax').parallax();
+  
+  $('.leftClick').click(function(){
+      $('.slider').slider('prev');
+     
+  });
+
+  $('.rightClick').click(function(){
+      $('.slider').slider('next');
+     
+  });
+
   
 })

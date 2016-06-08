@@ -1,4 +1,13 @@
 <div class="slider sliderone">
+
+    <div class="leftClick">
+      <h5 class="leftArrow"><</h5>
+    </div>
+  
+  <div class="rightClick">
+  <h5 class="rightArrow">></h5>
+  </div>
+
   <ul class="slides">
     <li>
       <img src="<%= @story.cover_img %>">
@@ -19,7 +28,7 @@
   <% @pages.each do |page| %>
   <li>
   <%= image_tag page.book_pictures.url %>
-    <img src="<%= page.page_image %>">
+    <img src="<%= page.book_pictures %>">
       <div class="caption left-align">
         <h3><%=  page.body %></h3>
         <h5 class="light grey-text text-lighten-3"><%= @count = @count + 1 %></h5>

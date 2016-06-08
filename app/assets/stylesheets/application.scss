@@ -12,3 +12,39 @@
   position: relative;
   z-index: 999;
 }
+
+.leftClick {
+  position: absolute;
+  left: 0;
+  width: 200px;
+  height: 550px;
+  background-color: blue;
+  z-index: 999;
+  display: inline-flex;
+}
+
+.rightClick {
+  position: absolute;
+  right: 0;
+  width: 200px;
+  height: 550px;
+  background-color: blue;
+  z-index: 999;
+  display: inline-flex;
+}
+
+.leftArrow {
+ margin: auto 5px;
+ width: 100%;
+ text-align: left;
+}
+
+.rightArrow {
+  text-align: right;
+  width: 100%;
+  margin: auto 5px;
+}
+
+.slider {
+  position: relative;
+}
