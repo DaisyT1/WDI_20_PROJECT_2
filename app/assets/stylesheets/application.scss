@@ -14,37 +14,51 @@
 }
 
 .leftClick {
+  cursor: pointer;
   position: absolute;
   left: 0;
   width: 200px;
   height: 550px;
-  background-color: blue;
   z-index: 999;
   display: inline-flex;
+  background: -webkit-linear-gradient(right, rgba(127,121,121,0), rgba(127,121,121,0.9)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(left, rgba(127,121,121,0), rgba(127,121,121,0.9)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left, rgbargba(127,121,121,0), rgba(127,121,121,0.9)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to left, rgba(127,121,121,0), rgba(127,121,121,0.9)); /* Standard syntax (must be last) */
 }
 
 .rightClick {
+  cursor: pointer;
   position: absolute;
   right: 0;
   width: 200px;
   height: 550px;
-  background-color: blue;
   z-index: 999;
   display: inline-flex;
+  background: -webkit-linear-gradient(left, rgba(127,121,121,0), rgba(127,121,121,0.9)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, rgba(127,121,121,0), rgba(127,121,121,0.9)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, rgba(127,121,121,0), rgba(127,121,121,0.9)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, rgba(127,121,121,0), rgba(127,121,121,0.9)); /* Standard syntax (must be last) */
 }
 
 .leftArrow {
  margin: auto 5px;
  width: 100%;
  text-align: left;
+ font-size: 50px;
+ color: rgba(138, 149, 165, 1);
 }
 
 .rightArrow {
   text-align: right;
   width: 100%;
   margin: auto 5px;
+  font-size: 50px;
+  color: rgba(138, 149, 165, 1);
 }
 
 .slider {
   position: relative;
 }
+
+

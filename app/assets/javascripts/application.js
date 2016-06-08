@@ -8,7 +8,7 @@ $( document ).ready(function(){
   $('.slider').slider({
     full_width: true,
     height: 550,
-    indicators: true
+    indicators: false
   });
 
   $('.sliderone').slider('pause')
