@@ -1,11 +1,10 @@
-<p id="notice"><%= notice %></p>
 
 <div class="container">
   <h3>My library</h3>
   
   <div class="row">
   <% @stories.each do |story| %>
-    <div class="col s12 m4">
+    <div class="col s12 m5">
      <a href="stories/<%= story.id %>">
        <div class="card medium">
          <div class="card-image">

@@ -13,6 +13,7 @@ class StoriesController < ApplicationController
   def show
     @pages = @story.pages.all
     @count = 0
+    @random = ["left-align", "right-align"].sample
   end
 
   # GET /stories/new
