@@ -22,7 +22,7 @@
       <div class="center-align">
           <h2 class="valign">Get started</h2>
           <h4 class="valign">Click to add a new page</h4>
-          <a href="<%= new_story_page_path(@story) %>" class="addPageButton btn-floating btn-large waves-effect waves-light"><i class="material-icons">add</i></a>
+          <a href="<%= new_story_page_path(@story) %>" class="addPageButton btn-floating btn-large waves-effect waves-light teal"><i class="material-icons">add</i></a>
         </div>
         </div>
       </div>
@@ -33,7 +33,6 @@
     <img src="<%= page.book_pictures %>">
       <div class="caption <%= @random %>">
         <h3><%=  page.body %></h3>
-        <h5 class="light grey-text text-lighten-3"><%= @count = @count + 1 %></h5>
       </div>
     </li>
       <% end %>

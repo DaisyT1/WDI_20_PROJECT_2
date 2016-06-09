@@ -31,8 +31,6 @@ class PagesController < ApplicationController
     @story = Story.find(params[:id])
     @page = @story.pages.new(page_params)
 
-    # @story = current_user.stories.new(story_params)
-
     respond_to do |format|
       if @page.save
         format.html { redirect_to edit_story_path(@page.story), notice: 'Page was successfully created.' }

@@ -1,15 +1,19 @@
 @import "reset";
 @import "vairables";
 
+h3 {
+  color: black;
+}
+
 nav .nav-wrapper {
-  background: blue;
+  background: red;
 }
 
 #firstPageNote {
   position: relative;
   padding-top: 300px;
   z-index: 999;
-  }
+}
 
 .addPageButton {
   position: relative;
@@ -62,4 +66,11 @@ nav .nav-wrapper {
 
 .slider {
   position: relative;
+}
+
+
+.card-image {
+  .edit-thumbnail {
+    height: 250px;
+  }
 }

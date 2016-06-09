@@ -33,6 +33,10 @@ class StoriesController < ApplicationController
   def create
     @story = current_user.stories.new(story_params)
 
+    if @story.cover_img == nil
+      @story.cover_img = "images/newYork.png"
+    end
+
     respond_to do |format|
       if @story.save
         format.html { redirect_to @story, notice: 'Story was successfully created.' }

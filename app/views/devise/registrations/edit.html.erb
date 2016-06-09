@@ -5,7 +5,7 @@
   <h5><%= devise_error_messages! %></h5>
 
   <div class="row">
-    <div class="input-field col s8">
+    <div class="input-field col s12">
       <div class="field">
         <%= f.label :name %><br />
         <%= f.text_field :name, autofocus: true %>
@@ -13,7 +13,7 @@
     </div>
   </div>
  <div class="row">
-     <div class="input-field col s8">
+     <div class="input-field col s12">
        <div class="field">
         <%= f.label :username %><br />
         <%= f.text_field :username %>
@@ -21,7 +21,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="input-field col s8">
+    <div class="input-field col s12">
       <div class="field">
         <%= f.label :email %><br />
         <%= f.email_field :email %>
@@ -36,13 +36,13 @@
   <div class="row">
     <div class="field">
         <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-          <div class="input-field col s8">
+          <div class="input-field col s12">
         <%= f.password_field :password, autocomplete: "off" %>
       </div>
     </div>
   </div>
   <div class="row">
-    <div class="input-field col s8">
+    <div class="input-field col s12">
       <div class="field">
         <%= f.label :password_confirmation %><br />
         <%= f.password_field :password_confirmation, autocomplete: "off" %>
@@ -52,7 +52,7 @@
   <div class="row">
     <div class="field">
         <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-         <div class="input-field col s8">
+         <div class="input-field col s12">
         <%= f.password_field :current_password, autocomplete: "off" %>
       </div>
     </div>
