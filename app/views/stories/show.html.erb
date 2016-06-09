@@ -1,41 +1,43 @@
 <div class="slider sliderone">
 
-    <div class="leftClick">
-      <h5 class="leftArrow">&#10094</h5>
-    </div>
+  <div class="leftClick">
+    <h5 class="leftArrow">&#10094</h5>
+  </div>
   
   <div class="rightClick">
-  <h5 class="rightArrow">&#10095</h5>
+    <h5 class="rightArrow">&#10095</h5>
   </div>
 
   <ul class="slides">
     <li>
       <img src="<%= @story.cover_img %>">
       <div class="caption center-align">    
-      <h3><%= @story.title %></h3>
-      <h5 class="light grey-text text-lighten-3"></h5>
-    </div>
-  </li>
-
-  <% if @story.pages.count == 0 %>
-    <div class="caption" id="firstPageNote">
-      <div class="center-align">
-          <h2 class="valign">Get started</h2>
-          <h4 class="valign">Click to add a new page</h4>
-          <a href="<%= new_story_page_path(@story) %>" class="addPageButton btn-floating btn-large waves-effect waves-light teal"><i class="material-icons">add</i></a>
-        </div>
-        </div>
-      </div>
-    <% else %>
-  <% @pages.each do |page| %>
-  <li>
-  <%= image_tag page.book_pictures.url %>
-    <img src="<%= page.book_pictures %>">
-      <div class="caption <%= @random %>">
-        <h3><%=  page.body %></h3>
+        <h3><%= @story.title %></h3>
+        <h5 class="light grey-text text-lighten-3"></h5>
       </div>
     </li>
-      <% end %>
-    <% end %>
-  </ul>
+
+    <% if @story.pages.count == 0 %>
+    <div class="caption" id="firstPageNote">
+      <div class="center-align">
+        <h2 class="valign">Get started</h2>
+        <h4 class="valign">Click to add a new page</h4>
+        <a href="<%= new_story_page_path(@story) %>" class="addPageButton btn-floating btn-large waves-effect waves-light teal"><i class="material-icons">add</i></a>
+      </div>
+    </div>
+  </div>
+  <% else %>
+  <% @pages.each do |page| %>
+  <li>
+    <%= image_tag page.book_pictures.url %>
+    <img src="<%= page.book_pictures %>">
+    <div class="caption <%= @random %>">
+      <div class="col s10 m6">
+        <h5><%=  page.body %></h5>
+      </div>
+    </div>
+  </li>
+  <% end %>
+  <% end %>
+</ul>
 </div>
