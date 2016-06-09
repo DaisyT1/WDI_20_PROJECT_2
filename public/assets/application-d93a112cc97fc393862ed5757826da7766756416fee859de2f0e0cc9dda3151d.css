@@ -1,0 +1,133 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url(Materialize/bin/materialize.css);
+/* line 6, /Users/willhayler/development/WDI_20_PROJECT_2/app/assets/stylesheets/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 25, /Users/willhayler/development/WDI_20_PROJECT_2/app/assets/stylesheets/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 29, /Users/willhayler/development/WDI_20_PROJECT_2/app/assets/stylesheets/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 32, /Users/willhayler/development/WDI_20_PROJECT_2/app/assets/stylesheets/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 35, /Users/willhayler/development/WDI_20_PROJECT_2/app/assets/stylesheets/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 38, /Users/willhayler/development/WDI_20_PROJECT_2/app/assets/stylesheets/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 43, /Users/willhayler/development/WDI_20_PROJECT_2/app/assets/stylesheets/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 5, /Users/willhayler/development/WDI_20_PROJECT_2/app/assets/stylesheets/application.scss */
+#firstPageNote {
+  position: relative;
+  padding-top: 300px;
+  z-index: 999;
+}
+
+/* line 11, /Users/willhayler/development/WDI_20_PROJECT_2/app/assets/stylesheets/application.scss */
+.addPageButton {
+  position: relative;
+  z-index: 999;
+}
+
+/* line 16, /Users/willhayler/development/WDI_20_PROJECT_2/app/assets/stylesheets/application.scss */
+.leftClick {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  width: 200px;
+  height: 550px;
+  z-index: 999;
+  display: inline-flex;
+  background: -webkit-linear-gradient(right, rgba(127, 121, 121, 0), rgba(127, 121, 121, 0.9));
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(left, rgba(127, 121, 121, 0), rgba(127, 121, 121, 0.9));
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left, rgbargba(127, 121, 121, 0), rgba(127, 121, 121, 0.9));
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to left, rgba(127, 121, 121, 0), rgba(127, 121, 121, 0.9));
+  /* Standard syntax (must be last) */
+}
+
+/* line 30, /Users/willhayler/development/WDI_20_PROJECT_2/app/assets/stylesheets/application.scss */
+.rightClick {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  width: 200px;
+  height: 550px;
+  z-index: 999;
+  display: inline-flex;
+  background: -webkit-linear-gradient(left, rgba(127, 121, 121, 0), rgba(127, 121, 121, 0.9));
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, rgba(127, 121, 121, 0), rgba(127, 121, 121, 0.9));
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, rgba(127, 121, 121, 0), rgba(127, 121, 121, 0.9));
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, rgba(127, 121, 121, 0), rgba(127, 121, 121, 0.9));
+  /* Standard syntax (must be last) */
+}
+
+/* line 44, /Users/willhayler/development/WDI_20_PROJECT_2/app/assets/stylesheets/application.scss */
+.leftArrow {
+  margin: auto 5px;
+  width: 100%;
+  text-align: left;
+  font-size: 50px;
+  color: #8a95a5;
+}
+
+/* line 52, /Users/willhayler/development/WDI_20_PROJECT_2/app/assets/stylesheets/application.scss */
+.rightArrow {
+  text-align: right;
+  width: 100%;
+  margin: auto 5px;
+  font-size: 50px;
+  color: #8a95a5;
+}
+
+/* line 60, /Users/willhayler/development/WDI_20_PROJECT_2/app/assets/stylesheets/application.scss */
+.slider {
+  position: relative;
+}
