@@ -1,5 +1,5 @@
  <nav>
-   <div class="nav-wrapper">
+   <div class="nav-wrapper" style="background: #456797; border-radius: 0 0 4px 4px;">
      <a href="/" class="brand-logo" class="logo">BookWorm</a>
      <a href="" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
     <% if current_user %>
@@ -17,8 +17,6 @@
    <ul class="side-nav" id="mobile-demo">
    <% if current_user %>   
       <li><a href="/stories">Stories</a></li>
-      <li><a href="/pages">Pages</a></li>
-      <li><a href="/users/<%= current_user.id %>"><%= current_user.username %></a></li>
       <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
       <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
       <% else %>
