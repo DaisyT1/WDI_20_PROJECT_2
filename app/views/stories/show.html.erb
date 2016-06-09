@@ -19,9 +19,11 @@
 
   <% if @story.pages.count == 0 %>
     <div class="caption" id="firstPageNote">
+      <div class="center-align">
           <h2 class="valign">Get started</h2>
           <h4 class="valign">Click to add a new page</h4>
           <a href="<%= new_story_page_path(@story) %>" class="addPageButton btn-floating btn-large waves-effect waves-light"><i class="material-icons">add</i></a>
+        </div>
         </div>
       </div>
     <% else %>
