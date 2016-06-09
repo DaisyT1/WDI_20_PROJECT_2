@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'rails_12factor', group: :production
 gem 'carrierwave', '0.10.0'
 gem 'rmagick'
 gem 'devise'
