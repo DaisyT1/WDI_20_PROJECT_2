@@ -14,6 +14,10 @@ nav .nav-wrapper {
   border-radius: 0 0 4px 4px ;
 }
 
+#card-title {
+  color: black;
+}
+
 #firstPageNote {
   position: relative;
   padding-top: 300px;
@@ -73,9 +77,16 @@ nav .nav-wrapper {
   position: relative;
 }
 
-
+// STORY INDEX PAGE
 .card-image {
   .edit-thumbnail {
     height: 250px;
   }
 }
+
+// STORY SHOW PAGE FOR PAGES
+// .card-image {
+//   .pages {
+//     height: 250px;
+//   }
+// }
